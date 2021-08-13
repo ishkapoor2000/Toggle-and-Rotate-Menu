@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<section class="card horizontal" id="card">
+		<div id="toggle" onclick="rotate()">
+			<span id="toggle-icon" class="iconify toggle-icon" data-icon="uil:crop-alt-rotate-right">
+			</span>
+		</div>
+		<!-- Home -->
+		<label for="home">
+			<input class="nav-input" type="radio" id="home" name="group" />
+			<span class="nav-button">
+				<span class="iconify nav-icon" data-icon="uil:estate"></span>
+				<span class="nav-text">Home</span>
+			</span>
+		</label>
+		<!-- Find -->
+		<label for="find">
+			<input class="nav-input" type="radio" id="find" name="group" />
+			<span class="nav-button">
+				<span class="iconify nav-icon" data-icon="uil:search"></span>
+				<span class="nav-text">Find</span>
+			</span>
+		</label>
+		<!-- Likes -->
+		<label for="likes">
+			<input class="nav-input" type="radio" id="likes" name="group" />
+			<span class="nav-button">
+				<span class="iconify nav-icon" data-icon="uil:heart"></span>
+				<span class="nav-text">Likes</span>
+			</span>
+		</label>
+	</section>
+	<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

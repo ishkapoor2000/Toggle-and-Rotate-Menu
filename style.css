@@ -1,0 +1,89 @@
+:root {
+	--background-color-dark: hsl(0, 0%, 5%);
+	--card-base-color-dark: hsl(252, 7%, 13%);
+	--icon-default-color: hsl(240, 8%, 95%);
+	--icon-hilight-color: hsl(204, 72%, 66%);
+	--text-font: caption;
+	--rotate-icon-color: aqua;
+}
+
+body {
+	background-color: var(--background-color-dark);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+}
+
+section.card {
+	transform: translateY(calc(50vh - 50px));
+	background-color: var(--card-base-color-dark);
+	padding: 2.5rem;
+	border-radius: 20px;
+}
+
+section.card.horizontal {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-icon {
+	position: absolute;
+	color: var(--rotate-icon-color);
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+.nav-button {
+	position: relative;
+	cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+.nav-input {
+	position: absolute;
+	transform: scale(0);
+}
+
+.nav-icon {
+	transition: all 0.35s;
+}
+
+.nav-text {
+	font-size: 0.9rem;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	color: var(--icon-hilight-color);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.35s, opacity 1.25s;
+	font: var(--text-font);
+}
+
+.nav-input:checked ~
+.nav-button {
+	color: var(--icon-hilight-color);
+}
+
+.nav-input:checked ~
+.nav-button .nav-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.nav-input:checked ~
+.nav-button .nav-icon {
+	transform: translateY(-9px);
+}
