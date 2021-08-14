@@ -30,6 +30,13 @@ section.card.horizontal {
     justify-content: center;
 }
 
+.nav-icon:focus,
+.nav-icon > *:focus,
+.toggle-icon > *:focus,
+.toggle-icon:focus {
+	outline: none;
+}
+
 .toggle-icon {
 	position: absolute;
 	color: var(--rotate-icon-color);
