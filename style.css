@@ -17,7 +17,7 @@ body {
 }
 
 section.card {
-	transform: translateY(calc(50vh - 50px));
+	transform: translateY(calc(50vh - 72px));
 	background-color: var(--card-base-color-dark);
 	padding: 2.5rem;
 	border-radius: 20px;
@@ -35,6 +35,7 @@ section.card.horizontal {
 .toggle-icon > *:focus,
 .toggle-icon:focus {
 	outline: none;
+	user-select: none;
 }
 
 .toggle-icon {
@@ -47,13 +48,14 @@ section.card.horizontal {
 
 .nav-button {
 	position: relative;
+	margin: 0.5rem;
 	cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: white;
+    color: var(--icon-default-color);
     padding: 0.5rem;
 }
 
